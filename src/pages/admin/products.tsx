@@ -1,16 +1,16 @@
 import { ReactElement, useEffect, useState } from "react";
+import toast from "react-hot-toast";
 import { FaPlus } from "react-icons/fa";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { Column } from "react-table";
 import AdminSidebar from "../../components/admin/AdminSidebar";
 import TableHOC from "../../components/admin/TableHOC";
-import { useGetAllProductsQuery } from "../../redux/api/productApi";
-import { RootState, server } from "../../redux/store";
-import toast from "react-hot-toast";
-import { CustomError } from "../../types/api-types";
-import { useDispatch, useSelector } from "react-redux";
 import { Skeltonloader } from "../../components/loader";
+import { useGetAllProductsQuery } from "../../redux/api/productApi";
 import { refetchProduct } from "../../redux/reducers/cartReducer";
+import { RootState } from "../../redux/store";
+import { CustomError } from "../../types/api-types";
 
 interface DataType {
   photo: ReactElement;
