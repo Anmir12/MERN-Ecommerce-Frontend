@@ -35,7 +35,7 @@ const Productmanagement = () => {
       setPriceUpdate(price);
       setStockUpdate(stock);
       setCategoryUpdate(category);
-      setPhotoUpdate(`${server}/${photo}`);
+      setPhotoUpdate(`${photo}`);
     }
   }, [data]);
 

@@ -14,7 +14,7 @@ const CartItems = ({ cartItem,incrementHandler,decrementHandler,removeHandler }:
     const { name, price, quantity, photo, productId } = cartItem;
     return (
       <div className="cart-item">
-        <img src={`${server}/${photo}`} alt={name}/>
+        <img src={`${photo}`} alt={name}/>
         <article >
           <Link to ={`/products/${productId}`}>{name}</Link>
         <span>{price}</span>

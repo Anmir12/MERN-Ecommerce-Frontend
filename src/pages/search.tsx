@@ -38,7 +38,7 @@ const Search = () => {
     price: maxprice,
     page,
   });
-  
+
   const isPrevPage = page > 1;
   const isNextPage = page < 4;
 
@@ -57,11 +57,11 @@ const Search = () => {
       toast.error("Out Of Stock");
       return; // Stop execution if the product is out of stock
     }
-  
+
     dispatch(addToCart(cartItem));
     toast.success("Added To Cart");
   };
- 
+
   return (
     <div className="product-search-page">
       <aside>
